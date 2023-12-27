@@ -1,11 +1,9 @@
-const rock = document.querySelector('.user-rock');
-const paper = document.querySelector('.user-paper')
-const scissor = document.querySelector('.user-scissor')
-
-const options = ['rock', 'paper', 'scissors']
-
+let playerScore = 0
+let computerScore = 0
 
 const game = (choice) => {
+    const options = ['rock', 'paper', 'scissors']
+
     let computerChoice = () => {
         return options[Math.floor(Math.random() * options.length)]
     };
@@ -13,16 +11,18 @@ const game = (choice) => {
     computerChoice = computerChoice()
 
     if(choice === computerChoice){
-        console.log('it\'s a tie')
+        console.log(`Player chose ${choice} and COM also chose ${computerChoice} it\'s a tie the score is ${playerScore} to ${computerScore}`)
     }
     else if(
     choice === 'rock' && computerChoice === 'scissors' ||
     choice === 'paper' && computerChoice === 'rock' ||
     choice === 'scissors' && computerChoice === 'paper'){
-        console.log('you win')
+        playerScore++
+        console.log(`Player chose ${choice} and COM chose ${computerChoice} you win the score is ${playerScore} to ${computerScore}`)
     }
     else{
-        console.log('you lose')
+        computerScore++
+        console.log(`Player chose ${choice} and COM chose ${computerChoice} you lose the score is ${playerScore} to ${computerScore}`)
     }
 }
 
