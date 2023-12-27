@@ -1,3 +1,5 @@
+const score = document.querySelector('.score')
+
 let playerScore = 0
 let computerScore = 0
 
@@ -24,9 +26,12 @@ const game = (choice) => {
         computerScore++
         console.log(`Player chose ${choice} and COM chose ${computerChoice} you lose the score is ${playerScore} to ${computerScore}`)
     }
+    score.innerHTML = `Score: ${playerScore} to ${computerScore}`
 }
 const resetGame = () => {
     computerScore = 0
     playerScore = 0
+    score.innerHTML = `Score: ${playerScore} to ${computerScore}`
 }
+
 
