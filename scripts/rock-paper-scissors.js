@@ -25,4 +25,8 @@ const game = (choice) => {
         console.log(`Player chose ${choice} and COM chose ${computerChoice} you lose the score is ${playerScore} to ${computerScore}`)
     }
 }
+const resetGame = () => {
+    computerScore = 0
+    playerScore = 0
+}
 
