@@ -1,7 +1,19 @@
 const score = document.querySelector('.score')
-
+const btns = document.querySelectorAll('.btn')
+let scoreBoard = 0
 let playerScore = 0
 let computerScore = 0
+
+const resetGame = () => {
+    computerScore = 0;
+    playerScore = 0;
+    updateScore();
+}
+
+const updateScore = () => {
+    score.innerHTML = `Score: User ${playerScore} to COM ${computerScore}`;
+};
+
 
 const game = (choice) => {
     const options = ['rock', 'paper', 'scissors']
@@ -26,12 +38,19 @@ const game = (choice) => {
         computerScore++
         console.log(`Player chose ${choice} and COM chose ${computerChoice} you lose the score is ${playerScore} to ${computerScore}`)
     }
-    score.innerHTML = `Score: ${playerScore} to ${computerScore}`
+    updateScore();
+
+    if (computerScore === 3 || playerScore === 3){
+        btns.forEach(btn => {
+            btn.addEventListener('click', resetGame);
+        });
+    }
+    if (computerScore === 0 && playerScore === 0){
+        btns.forEach(btn => {
+            btn.removeEventListener('click', resetGame);
+        });
+    }
 }
-const resetGame = () => {
-    computerScore = 0
-    playerScore = 0
-    score.innerHTML = `Score: ${playerScore} to ${computerScore}`
-}
+
 
 
