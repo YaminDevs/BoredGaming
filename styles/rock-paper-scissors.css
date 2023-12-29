@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    gap: 5rem;
+}
+.options{
+    display: flex;
+    padding-left: 0;
+    gap: 1rem;
+}
+.option{
+    list-style: none;
+}
+.com{
+    border: 1px solid black;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px;
+}

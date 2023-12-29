@@ -1,5 +1,6 @@
 const score = document.querySelector('.score')
 const btns = document.querySelectorAll('.btn')
+const result = document.querySelector('.result')
 let scoreBoard = 0
 let playerScore = 0
 let computerScore = 0
@@ -23,8 +24,7 @@ const game = (choice) => {
     };
 
     computerChoice = computerChoice()
-
-    if(choice === computerChoice){
+    if(choice === computerChoice ){
         console.log(`Player chose ${choice} and COM also chose ${computerChoice} it\'s a tie the score is ${playerScore} to ${computerScore}`)
     }
     else if(
@@ -39,6 +39,7 @@ const game = (choice) => {
         console.log(`Player chose ${choice} and COM chose ${computerChoice} you lose the score is ${playerScore} to ${computerScore}`)
     }
     updateScore();
+
 
     if (computerScore === 3 || playerScore === 3){
         btns.forEach(btn => {

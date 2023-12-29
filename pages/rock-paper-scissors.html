@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<h1>
-    rock-paper-scissors
-</h1>
-<h2 class="score">Score: User 0 to COM 0</h2>
-<ul>
-    <h2>USER</h2>
-    <li class="user-rock">
-        <button onclick="game('rock')" class="btn">
-            🪨
-        </button>
-    </li>
-    <li class="user-paper">
-        <button onclick="game('paper')" class="btn">
-            📄
-        </button>
-    </li>
-    <li class="user-scissors">
-        <button onclick="game('scissors')" class="btn">
-            ✂️
-        </button>
-    </li>
-</ul>
-<ul>
-    <h2>COM</h2>
-    <li class="com-rock">🪨</li>
-    <li class="com-paper">📄</li>
-    <li class="com-scissors">✂️</li>
-</ul>
-<button onclick="resetGame()">reset</button>
-<script src="../scripts/rock-paper-scissors.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="../styles/rock-paper-scissors.css"/>
+</head>
+</html>
+<body>
+    <h1>
+        rock-paper-scissors
+    </h1>
+    <h2 class="score">Score: User 0 to COM 0</h2>
+    <h2 class="result"></h2>
+    <div class="box">
+        <ul class="options">
+            <li class="rock option">
+                <button onclick="game('rock')" class="btn">
+                    🪨
+                </button>
+            </li>
+            <li class="paper option">
+                <button onclick="game('paper')" class="btn">
+                    📄
+                </button>
+            </li>
+            <li class="scissors option">
+                <button onclick="game('scissors')" class="btn">
+                    ✂️
+                </button>
+            </li>
+        </ul>
+        <ul class="options">
+            <li class="rock com option">
+                🪨
+            </li>
+            <li class="paper com option">
+                📄
+            </li>
+            <li class="scissors com option"> 
+                ✂️
+            </li>
+        </ul>
+    </div>
+    <button onclick="resetGame()" class="reset">reset</button>
+    <script src="../scripts/rock-paper-scissors.js"></script>
+    
+</body>
+
