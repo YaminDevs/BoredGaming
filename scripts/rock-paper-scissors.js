@@ -1,5 +1,5 @@
 const score = document.querySelector('.score')
-const btns = document.querySelectorAll('.btn')
+const btns = document.querySelectorAll('.player')
 const result = document.querySelector('.result')
 const text = document.querySelector('.text')
 let scoreBoard = 0
