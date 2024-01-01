@@ -21,10 +21,16 @@ body{
 }
 .option{
     list-style: none;
+    width: 5em;
+    background-color: dodgerblue;
+    border-radius: 5px;
 }
 .com{
     border: 1px solid black;
     padding-left: 3px;
     padding-right: 3px;
     border-radius: 5px;
+}
+.player{
+    cursor: pointer;
 }
