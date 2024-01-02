@@ -18,19 +18,24 @@ body{
     display: flex;
     padding-left: 0;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
-    width: 5em;
+    width: 2.5em;
+    height: 5em;
     background-color: dodgerblue;
     border-radius: 5px;
-}
-.com{
     border: 1px solid black;
-    padding-left: 3px;
-    padding-right: 3px;
-    border-radius: 5px;
+    font-size: xx-large;
 }
+
 .player{
     cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
 }
