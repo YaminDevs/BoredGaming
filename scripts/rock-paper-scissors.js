@@ -24,8 +24,8 @@ const updateScore = () => {
             btn.removeEventListener('click', resetGame);
         });
     }
-    if(computerScore > 3 || playerScore > 3){
-        text.innerHTML = 'The game has been reset'
+    if(computerScore >= 3 || playerScore >= 3){
+        text.innerHTML = `someone reached 3 points`
     }
 };
 
